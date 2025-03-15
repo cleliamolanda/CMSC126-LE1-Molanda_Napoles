@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Cooking Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Accessible Cooking Guide</h1>
+        <p>Follow the steps to cook a delicious meal using keyboard navigation.</p>
+    </header>
+    
+    <main>
+        <section id="step1" class="step" aria-labelledby="step1-title">
+            <h2 id="step1-title">Step 1: Gather Ingredients</h2>
+            <p>Collect all the required ingredients before you start.</p>
+            <nav>
+                <a href="#step2" class="next">Next →</a>
+            </nav>
+        </section>
+
+        <section id="step2" class="step" aria-labelledby="step2-title" aria-hidden="true">
+            <h2 id="step2-title">Step 2: Prepare Ingredients</h2>
+            <p>Chop vegetables, measure spices, and set up your workstation.</p>
+            <nav>
+                <a href="#step1" class="prev">← Back</a>
+                <a href="#step3" class="next">Next →</a>
+            </nav>
+        </section>
+
+        <section id="step3" class="step" aria-labelledby="step3-title" aria-hidden="true">
+            <h2 id="step3-title">Step 3: Cook the Meal</h2>
+            <p>Follow the cooking instructions and stir occasionally.</p>
+            <nav>
+                <a href="#step2" class="prev">← Back</a>
+                <a href="#step4" class="next">Next →</a>
+            </nav>
+        </section>
+
+        <section id="step4" class="step" aria-labelledby="step4-title" aria-hidden="true">
+            <h2 id="step4-title">Step 4: Serve and Enjoy</h2>
+            <p>Plate the dish, garnish as needed, and enjoy your meal!</p>
+            <nav>
+                <a href="#step3" class="prev">← Back</a>
+                <a href="#step1" class="restart">Restart ↺</a>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>
