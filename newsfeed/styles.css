@@ -32,7 +32,7 @@ header {
 .news-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 800px;
     margin: 30px auto;
     gap: 25px;
 }
@@ -104,13 +104,13 @@ header {
     transition: background 0.3s ease-in-out;
     display: inline-block;
     padding: 8px 15px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #ff6b6b;
     border-radius: 5px;
     margin-top: 10px;
 }
 
 .news-content a:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #ff4500;
     color: #1e1e2e;
 }
 
@@ -155,6 +155,7 @@ header {
 @media (max-width: 600px) {
     .news-container {
         flex-direction: column;
+        gap: 20px;
     }
 
     .sidebar {
