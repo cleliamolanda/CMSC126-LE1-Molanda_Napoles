@@ -8,17 +8,20 @@
 </head>
 <body>
     <header>
-        <div id="header-upper">
-            <div class="logo">
-                <img src="reddit-logo-2005.png" alt="Reddit Logo">
-            </div>
-            <div class="user-actions">
-                <button>Login</button>
-                <button>Sign Up</button>
-            </div>
+        <div class="logo">
+            <img src="reddit-logo-2005.png" alt="Reddit Logo">
         </div>
+        <div class="header-right">
+            <p>
+                <strong><a href="#">7hundredand77</a></strong>, you're back!
+                <a href="#">preferences</a>
+                <a href="#">logout?</a> :(
+            </p>
+        </div>
+    </header>
 
-        <nav>
+    <nav>
+        <div>
             <ul class="tabmenu">
                 <li class="active">what's hot</li>
                 <li>new</li>
@@ -26,64 +29,86 @@
                 <li>top</li>
                 <li>saved</li>
             </ul>
-        </nav>
-    </header>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="">
+                <button class="search-btn">🔍</button>
+            </div>
+            <button class="new-msg">1 New Msg</button>
+            <button class="links">53,211 Link</button>
+            <button class="comments">4,887 Comment</button>
+        </div>
+    </nav>
     <div class="container">
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <ul>
-                <li>Front Page</li>
-                <li>Pics</li>
-                <li>Science</li>
-                <li>Technology</li>
-                <li>AskReddit</li>
-                <li>Funny</li>
-                <li>World News</li>
-                <li>TODAYILEARNED</li>
-                <li>World News</li>
-                <li>Web Design</li>
-                <li>Atheist</li>
-                <li>FFFFFUUUUUUUUUU</li>
+            <ul class="subreddits">
+                <li class="selected"><i class="fas fa-home"></i> FRONT PAGE</li>
+                <li><i class="fas fa-image"></i> PICS</li>
+                <li><i class="fas fa-flask"></i> SCIENCE</li>
+                <li><i class="fas fa-microchip"></i> TECHNOLOGY</li>
+                <li><i class="fas fa-comments"></i> ASK REDDIT</li>
+                <li><i class="fas fa-laugh"></i> FUNNY</li>
+                <li><i class="fas fa-exclamation-circle"></i> WTF</li>
+                <li class="selected-iama">IAMA</li>
+                <li><i class="fas fa-globe"></i> WORLD NEWS</li>
+                <li><i class="fas fa-lightbulb"></i> TODAYILEARNED</li>
+                <li><i class="fas fa-newspaper"></i> WORLDNEWS</li>
+                <li><i class="fas fa-code"></i> WEBDESIGN</li>
+                <li><i class="fas fa-book"></i> ATHEIST</li>
+                <li><i class="fas fa-grin-squint"></i> FFFFUUUUUUUUUU</li>
             </ul>
+            <p class="more"><a href="#">(MORE)</a></p>
+
+            <!-- Submit & Create Community -->
+            <div class="side-box">
+                <p class="side-header">Submit a link</p>
+                <p class="side-text">to anything interesting: news article, blog entry, video, picture...</p>
+            </div>
+            <div class="side-box">
+                <p class="side-header">Create Community</p>
+                <p class="side-text">...for your LARPing community.<br> ...because nothing in life is free (except reddit!) here on the side</p>
+            </div>
+
+            <!-- Tiny Ad -->
+            <div class="tiny-ad">
+                <img src="little-big-planet.jpg" alt="Little Big Planet">
+                <p>tiniest ad in the world</p>
+            </div>
         </aside>
-        <main>
-            <section class="posts">
+
+        <main class="main-content">
+            <!-- Post List -->
+            <section class="post-list">
                 <article class="post">
-                    <span class="score">215</span>
+                    <span class="votes">🔺 120</span>
                     <div class="post-content">
-                        <h2><a href="#">What do you call 60 guys watching the Super Bowl at home?</a></h2>
-                        <p>Submitted 19 hours ago by Krispykrackers | 623 comments</p>
+                        <h2>Post Title 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <span class="comments">💬 45 comments</span>
                     </div>
                 </article>
+
                 <article class="post">
-                    <span class="score">232</span>
+                    <span class="votes">🔺 85</span>
                     <div class="post-content">
-                        <h2><a href="#">I AM the guy who created this design AMA</a></h2>
-                        <p>Submitted 20 hours ago by 7hundredand77 | 208 comments</p>
+                        <h2>Post Title 2</h2>
+                        <p>Another interesting post about something cool.</p>
+                        <span class="comments">💬 30 comments</span>
                     </div>
                 </article>
+
                 <article class="post">
-                    <span class="score">103</span>
+                    <span class="votes">🔺 45</span>
                     <div class="post-content">
-                        <h2><a href="#">As a six-year-old, this was the best book ever</a></h2>
-                        <p>Submitted 12 hours ago by Maiko | 6,232 comments</p>
+                        <h2>Post Title 3</h2>
+                        <p>A third post with some engaging discussion.</p>
+                        <span class="comments">💬 12 comments</span>
                     </div>
                 </article>
             </section>
-            <button class="load-more">OLDER</button>
         </main>
-        <aside class="comment-section">
-            <h3>I AM the guy who created this design AMA</h3>
-            <div class="comment">
-                <p><strong>UserNumber42:</strong> Wow, the first Reddit redesign I've seen that doesn't suck...</p>
-            </div>
-            <div class="comment">
-                <p><strong>7hundredand77:</strong> Yeah, I know many people use widescreen monitors...</p>
-            </div>
-            <button class="save">Save</button>
-        </aside>
     </div>
-    <footer>
-        <p>&copy; 2025 Reddit Clone. All rights reserved.</p>
-    </footer>
 </body>
-</html>

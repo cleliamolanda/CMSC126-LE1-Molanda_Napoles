@@ -13,7 +13,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    border-radius: 5px 5px 0 0;
     border: 1px solid #ccc;
 }
 
@@ -25,7 +25,7 @@ nav {
     background-color: #E3E3E3;
     padding: 5px 15px;
     border: 1px solid #B5B5B5;
-    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+    border-radius: 0 0 5px 5px;
 }
 
 /* Logo */
@@ -73,7 +73,7 @@ nav {
     background-color: #E3E3E3;
     padding: 5px 15px;
     border: 1px solid #B5B5B5;
-    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+    border-radius: 0 0 5px 5px;
 }
 
 /* Left Side - Tab Menu */
@@ -96,7 +96,7 @@ nav {
 }
 
 .tabmenu li.active {
-    background-color: #FF4500; /* Reddit's signature orange */
+    background-color: #FF4500;
     color: white;
     font-weight: bold;
 }
@@ -129,7 +129,7 @@ nav {
 }
 
 .nav-right button:first-of-type {
-    color: #FF4500; /* Orange for "New Msg" */
+    color: #FF4500;
     font-weight: bold;
 }
 
@@ -146,7 +146,7 @@ nav {
     padding: 10px;
     font-family: Verdana, Arial, sans-serif;
     font-size: 12px;
-    flex-shrink: 0;  /* Prevent sidebar from shrinking */
+    flex-shrink: 0;
     background: #eef1f6;
     padding: 10px;
     border-right: 1px solid #ccc;
@@ -241,84 +241,27 @@ nav {
     border: 1px solid #DDD;
 }
 
-/* Layout - Ensure Sidebar and Main Content are Side by Side */
 .container {
-    display: flex;  /* Enables horizontal layout */
-    align-items: flex-start;  /* Aligns items to the top */
-    max-width: 1200px;  /* Ensures content doesn't stretch too wide */
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: auto;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 250px; /* Ensure sidebar has a fixed width */
-    flex-shrink: 0;  /* Prevent sidebar from shrinking */
+    width: 250px;
+    flex-shrink: 0;
     background: #eef1f6;
     padding: 10px;
     border-right: 1px solid #ccc;
 }
 
-/* Main Content */
-.main-content {
-    flex-grow: 1; /* Allows it to take the remaining space */
-    padding: 15px;
-    background: white;
-    min-height: 100vh; /* Ensures proper height */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Post List */
-.post-list {
-    width: 100%; /* Make it take full width of main content */
-}
-
-.post {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.votes {
-    font-weight: bold;
-    color: orange;
-    margin-right: 10px;
-}
-
-.comments {
-    font-size: 12px;
-    color: gray;
-    margin-left: auto;
-}
-
-/* Post Content */
-.post-content {
-    background: white;
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-}
-
-/* Comments */
-.comment {
-    background: #f1f1f1;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-}
-
-.comment .user {
-    font-weight: bold;
-    color: #0079d3;
-}
-
-/* Layout - Ensure Sidebar and Main Content are Side by Side */
 .container {
-    display: flex;  /* Enables horizontal layout */
-    align-items: flex-start;  /* Aligns items to the top */
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    max-width: 1200px;  /* Adjust width as needed */
+    max-width: 1200px;
     margin: auto;
 }
 
