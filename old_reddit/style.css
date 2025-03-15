@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50;
+    padding: 50;
+    background-color: #eef2f5;
+}
+
+/* header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DCEDFF;
+    padding: 10px 20px;
+} */
+
+.logo img {
+    width: 105px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0079d3;
+    font-weight: bold;
+}
+
+.user-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-controls .button {
+    background-color: #0079d3;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-between;
+    background-color: #DCEDFF;
+    padding: 10px 20px;
+}
+
+.sidebar {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #0079d3;
+    display: block;
+    padding: 5px 0;
+}
+
+.content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.votes {
+    font-weight: bold;
+    color: #ff4500;
+}
+
+.comments {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.thread {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.comment {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
