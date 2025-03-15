@@ -7,83 +7,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
         <h1>Pork Adobo Recipe</h1>
-        <p>This is a classic Filipino dinner! Super easy to make and it's done in no time!</p>
     </header>
 
     <main class="recipe-container">
         <section class="recipe-steps">
             <h2>Cooking Instructions</h2>
 
-            <article class="recipe-card">
-                <img src="images/step1.jpg" alt="Marinate pork">
+            <!-- Step 1 -->
+            <article id="step1" class="recipe-card">
+                <img src="step1.webp" alt="Marinate pork">
                 <div class="recipe-content">
                     <h3>Step 1: Marinate</h3>
                     <p>Marinate pork belly in soy sauce and garlic powder for at least 20 minutes.</p>
                 </div>
+                <a href="#step2" class="next">Next →</a>
             </article>
 
-            <article class="recipe-card">
-                <img src="images/step2.jpg" alt="Prepare pork">
+            <!-- Step 2 -->
+            <article id="step2" class="recipe-card">
+                <img src="step3.webp" alt="Prepare pork">
                 <div class="recipe-content">
                     <h3>Step 2: Prep Pork</h3>
                     <p>Coat pork belly in soy sauce and garlic powder while mincing garlic.</p>
                 </div>
+                <a href="#step1" class="prev">← Back</a>
+                <a href="#step3" class="next">Next →</a>
             </article>
 
-            <article class="recipe-card">
-                <img src="images/step3.jpg" alt="Fry pork">
+            <!-- Step 3 -->
+            <article id="step3" class="recipe-card">
+                <img src="step3.webp" alt="Fry pork">
                 <div class="recipe-content">
                     <h3>Step 3: Fry Pork</h3>
                     <p>In a heated pan with oil, fry pork belly until golden brown on all sides.</p>
                 </div>
+                <a href="#step2" class="prev">← Back</a>
+                <a href="#step4" class="next">Next →</a>
             </article>
 
-            <article class="recipe-card">
-                <img src="images/step4.jpg" alt="Sauté garlic">
+            <!-- Step 4 -->
+            <article id="step4" class="recipe-card">
+                <img src="step4.webp" alt="Sauté garlic">
                 <div class="recipe-content">
                     <h3>Step 4: Sauté Garlic</h3>
                     <p>Remove the pork, then add minced garlic to the pan. Do not burn.</p>
                 </div>
+                <a href="#step3" class="prev">← Back</a>
+                <a href="#step5" class="next">Next →</a>
             </article>
 
-            <article class="recipe-card">
-                <img src="images/step5.jpg" alt="Add spices">
+            <!-- Final Step -->
+            <article id="step5" class="recipe-card">
+                <img src="step5.webp" alt="Serve pork">
                 <div class="recipe-content">
-                    <h3>Step 5: Add Spices</h3>
-                    <p>Add bay leaves and black peppercorns. Sauté for a minute to release flavors.</p>
+                    <h3>Step 5: Serve</h3>
+                    <p>Enjoy your Pork Adobo with steamed rice!</p>
                 </div>
-            </article>
-
-            <article class="recipe-card">
-                <img src="images/step6.jpg" alt="Simmer pork">
-                <div class="recipe-content">
-                    <h3>Step 6: Simmer</h3>
-                    <p>Return pork to the pan, add water until half-covered, and simmer for 30 minutes.</p>
-                </div>
-            </article>
-
-            <article class="recipe-card">
-                <img src="images/step7.jpg" alt="Thicken sauce">
-                <div class="recipe-content">
-                    <h3>Step 7: Add Vinegar & Thicken</h3>
-                    <p>Add apple cider vinegar and sugar. Pour in cornstarch slurry to thicken sauce. Done!</p>
-                </div>
+                <a href="#step4" class="prev">← Back</a>
+                <a href="#step1" class="restart">↺ Restart</a>
             </article>
         </section>
-
-        <aside class="sidebar">
-            <h2>Cooking Tips</h2>
-            <ul>
-                <li><a href="#">Use pork belly for more flavor</a></li>
-                <li><a href="#">Marinate overnight for best taste</a></li>
-                <li><a href="#">Add coconut milk for a twist</a></li>
-                <li><a href="#">Use banana leaves for serving</a></li>
-            </ul>
-        </aside>
     </main>
-
 </body>
 </html>
