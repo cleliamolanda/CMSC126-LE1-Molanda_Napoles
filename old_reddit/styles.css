@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     background-color: #f6f6f6;
     margin: 0;
     padding: 0;
@@ -8,123 +8,364 @@ body {
 
 /* Header */
 header {
-    background-color: #cee3f8;
+    background-color: #DCEDFF;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    border: 1px solid #ccc;
 }
 
-.logo {
-    font-size: 24px;
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E3E3E3;
+    padding: 5px 15px;
+    border: 1px solid #B5B5B5;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Username */
+.header-right a {
+    color: #0079d3;
+    text-decoration: none;
     font-weight: bold;
 }
 
-nav ul {
-    list-style: none;
+.header-right a:hover {
+    text-decoration: none;
+}
+
+/* Separator */
+.header-right p {
+    margin: 0;
     display: flex;
+    align-items: center;
+}
+
+.header-right p a + a::before {
+    content: " | ";
+    color: #333;
+    margin: 0 5px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E3E3E3;
+    padding: 5px 15px;
+    border: 1px solid #B5B5B5;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+/* Left Side - Tab Menu */
+.tabmenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tabmenu li {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: white;
+    border: 1px solid #B5B5B5;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #336699;
+    cursor: pointer;
+}
+
+.tabmenu li.active {
+    background-color: #FF4500; /* Reddit's signature orange */
+    color: white;
+    font-weight: bold;
+}
+
+/* Right Side - Search & Buttons */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 140px;
+    height: 22px;
+    border: 1px solid #B5B5B5;
+    border-radius: 3px;
+    background-color: white;
+}
+
+/* Buttons */
+.nav-right button {
+    background-color: white;
+    border: 1px solid #B5B5B5;
+    border-radius: 3px;
+    font-size: 12px;
+    color: black;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.nav-right button:first-of-type {
+    color: #FF4500; /* Orange for "New Msg" */
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+.nav-right button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #EEF2F7;
+    border-right: 2px solid #bbb;
+    padding: 10px;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+    flex-shrink: 0;  /* Prevent sidebar from shrinking */
+    background: #eef1f6;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+/* Subreddit List */
+.subreddits {
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-nav ul .active {
-    font-weight: bold;
-    color: red;
-}
-
-.user-actions button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Layout */
-.container {
-    display: flex;
-    padding: 20px;
-}
-
-.sidebar {
-    width: 200px;
+.subreddits li {
+    padding: 5px;
+    border: 1px solid #DDD;
     background: white;
-    padding: 15px;
-    border-right: 1px solid #ddd;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-main {
-    flex-grow: 1;
-    padding: 0 20px;
-}
-
-.posts .post {
+    color: #333;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    background: white;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.score {
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.load-more {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 15px;
-    background: #ff4500;
-    color: white;
-    border: none;
+    gap: 5px;
     cursor: pointer;
 }
 
-/* Comment Section */
-.comment-section {
-    width: 300px;
+.subreddits li i {
+    color: #0079D3;
+}
+
+/* Hover Effect on IAMA */
+.subreddits .selected-iama {
+    background: white;
+    color: red;
+    border: 1px solid #DDD;
+    padding: 5px;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out;
+}
+
+.subreddits .selected-iama:hover {
+    background: red;
+    color: white;
+}
+
+/* (MORE) Link */
+.more {
+    text-align: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.more a {
+    text-decoration: none;
+    color: #0079D3;
+}
+
+.more a:hover {
+    text-decoration: underline;
+}
+
+/* Side Boxes */
+.side-box {
+    margin-top: 10px;
+    padding: 8px;
+    background: white;
+    border: 1px solid #DDD;
+}
+
+.side-header {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.side-text {
+    font-size: 11px;
+    color: #666;
+}
+
+/* Tiny Ad */
+.tiny-ad {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+}
+
+.tiny-ad img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #DDD;
+}
+
+/* Layout - Ensure Sidebar and Main Content are Side by Side */
+.container {
+    display: flex;  /* Enables horizontal layout */
+    align-items: flex-start;  /* Aligns items to the top */
+    max-width: 1200px;  /* Ensures content doesn't stretch too wide */
+    margin: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px; /* Ensure sidebar has a fixed width */
+    flex-shrink: 0;  /* Prevent sidebar from shrinking */
+    background: #eef1f6;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1; /* Allows it to take the remaining space */
+    padding: 15px;
+    background: white;
+    min-height: 100vh; /* Ensures proper height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Post List */
+.post-list {
+    width: 100%; /* Make it take full width of main content */
+}
+
+.post {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.votes {
+    font-weight: bold;
+    color: orange;
+    margin-right: 10px;
+}
+
+.comments {
+    font-size: 12px;
+    color: gray;
+    margin-left: auto;
+}
+
+/* Post Content */
+.post-content {
     background: white;
     padding: 15px;
-    border-left: 1px solid #ddd;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Comments */
+.comment {
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.comment .user {
+    font-weight: bold;
+    color: #0079d3;
+}
+
+/* Layout - Ensure Sidebar and Main Content are Side by Side */
+.container {
+    display: flex;  /* Enables horizontal layout */
+    align-items: flex-start;  /* Aligns items to the top */
+    justify-content: space-between;
+    max-width: 1200px;  /* Adjust width as needed */
+    margin: auto;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    padding: 15px;
+    max-width: calc(100% - 270px);
+    background: #fff;
+}
+
+.post-list {
+    width: 50%;
+    padding-right: 15px;
+}
+
+.post {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.votes {
+    font-weight: bold;
+    color: orange;
+    margin-right: 5px;
+}
+
+.comments {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Post Content */
+.post-content {
+    width: 50%;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ccc;
 }
 
 .comment {
-    background: #f0f0f0;
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    border-top: 1px solid #ddd;
 }
 
-.save {
-    background: #0079d3;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #cee3f8;
+.user {
+    font-weight: bold;
+    color: blue;
 }
