@@ -50,14 +50,89 @@ header {
     padding: 5px 5px 2px 5px;
 }
 
-.sidebar {
+/* Sidebar styles */
+sidebar {
+    width: 200px;
     background-color: #EFF8FF;
-    width: 220px;
-    padding: 1px 5px;
-    border: 1px #6B7076;
+    padding: 0px;
+    border-right: 1px solid #6B7076;
+    float: left;
 }
 
 .subreddits {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
 
+}
+
+.subreddits-links {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 12px;
+    padding: 8px 10px;
+    width: 100%;
+    cursor: pointer;
+    color: #0079d3;
+    font-weight: bold;
+    display: block;
+}
+
+.subreddits-links:hover {
+    background-color: #c6d6ee;
+}
+
+.subreddits button.active {
+    background-color: #FFFFFF;
+    font-weight: bold;
+    color: #FF4200;
+    border: solid #6B7076;
+    border-width: 1px 0px;
+
+}
+
+/* .more a {
+    text-decoration: none;
+    color: #0079d3;
+    font-weight: bold;
+} */
+
+.side-box {
+    background-color: #DCEDFF;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 15px;
+    border: 1px solid #a0bcd5;
+    border-left: none;
+}
+
+.side-header {
+    font-weight: bold;
+    font-size: 10px;
+    color: #0079d3;
+    text-decoration: none;
+    display: block;
+}
+
+.side-text {
+    font-size: 8px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.tiny-ad {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.tiny-ad img {
+    max-width: 100%;
+}
+
+.tiny-ad span {
+    font-size: 10px;
+    color: #666;
+    text-align: right;
+    align-content: top;
 }
