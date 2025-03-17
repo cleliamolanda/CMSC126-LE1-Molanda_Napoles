@@ -45,9 +45,10 @@ header {
     margin: 0;
     background-color: #F7FBFC;
     border: 1px solid #6B7076;
-    border-bottom-style: none;
+    border-radius: 3px 3px 0px 0px;
+    border-bottom: none;
     box-shadow: 10px #6B7076;
-    padding: 5px 5px 2px 5px;
+    padding: 10px 10px 5px 10px;
 }
 
 /* Sidebar styles */
@@ -116,7 +117,7 @@ sidebar {
 
 .side-text {
     font-size: 8px;
-    color: #333;
+    color: #6B7076;
     margin-top: 5px;
 }
 
@@ -132,7 +133,80 @@ sidebar {
 
 .tiny-ad span {
     font-size: 10px;
-    color: #666;
+    color: #6B7076;
     text-align: right;
     align-content: top;
+}
+
+/* Navigation bar styles */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: #EBECEE;
+    padding: 5px 5px 0px 5px;
+    border-bottom: 1px solid #6B7076;
+}
+
+.tab-menu {
+    padding-left: 10px;
+}
+
+.tab-menu button {
+    background: none;
+    border: 1px solid #6B7076;
+    border-radius: 3px 3px 0px 0px;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #3767BB;
+    cursor: pointer;
+}
+
+.tab-menu button.active {
+    color: #FF4200;
+    background-color: #FCFCFC;
+    border-bottom: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 5px;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid #6B7076;
+    border-radius: 3px;
+    overflow: hidden;
+    /* height: 50%; */
+}
+
+.search-bar {
+    border: none;
+    padding: 5px;
+    outline: none;
+    width: 150px;
+    background-color: #F9F9F9;
+}
+
+.search-btn {
+    border: none;
+    border-left: 1px solid #6B7076;
+    background-color: #F9F9F9;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.notifications button {
+    background: #F9F9F9;
+    border: 1px solid #6B7076;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #0079d3;
+    cursor: pointer;
+    /* height: 50%; */
 }
