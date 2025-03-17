@@ -16,10 +16,10 @@
     <main class="recipe-container">
 
         <!-- Step 1 -->
-        <section id="step1" class="step-card active">
+        <section id="step1" class="step-card" role="region" aria-labelledby="step1-title" tabindex="0">
             <div class="content">
-                <h2>Step 1: Prepare Ingredients</h2>
-                <ul class="ingredients-list">
+                <h2 id="step1-title">Step 1: Prepare Ingredients</h2>
+                <ul>
                     <li>1 kg pork belly (cut into chunks)</li>
                     <li>1/2 cup soy sauce</li>
                     <li>1/2 cup vinegar</li>
@@ -30,55 +30,71 @@
                     <li>1 cup water</li>
                     <li>(Optional) 1 tbsp sugar</li>
                 </ul>
-                <a href="#step2" class="next-btn">Next ➡</a>
+            </div>
+            <div class="nav-controls">
+                <a href="#step2" class="nav-btn">Next ➡</a>
             </div>
         </section>
 
         <!-- Step 2 -->
-        <section id="step2" class="step-card">
+        <section id="step2" class="step-card" role="region" aria-labelledby="step2-title" tabindex="0">
             <img src="images/step1.webp" alt="Pork marinating in soy sauce">
             <div class="content">
-                <h2>Step 2: Marinate the Pork</h2>
-                <p>Mix pork, soy sauce, garlic, and pepper.Let it marinate for 30 minutes.</p>
-                <a href="#step1" class="prev-btn">⬅ Back</a>
-                <a href="#step3" class="next-btn">Next ➡</a>
+                <h2 id="step2-title">Step 2: Marinate the Pork</h2>
+                <p>Mix pork, soy sauce, garlic, and pepper. Let it marinate for 30 minutes.</p>
+            </div>
+            <div class="nav-controls">
+                <a href="#step1" class="nav-btn">⬅ Back</a>
+                <a href="#step3" class="nav-btn">Next ➡</a>
             </div>
         </section>
 
         <!-- Step 3 -->
-        <section id="step3" class="step-card">
+        <section id="step3" class="step-card" role="region" aria-labelledby="step3-title" tabindex="0">
             <img src="images/step3.webp" alt="Pork being browned in a pan">
             <div class="content">
-                <h2>Step 3: Brown the Pork</h2>
+                <h2 id="step3-title">Step 3: Brown the Pork</h2>
                 <p>Heat oil and sauté the pork until golden brown.</p>
-                <a href="#step2" class="prev-btn">⬅ Back</a>
-                <a href="#step4" class="next-btn">Next ➡</a>
+            </div>
+            <div class="nav-controls">
+                <a href="#step2" class="nav-btn">⬅ Back</a>
+                <a href="#step4" class="nav-btn">Next ➡</a>
             </div>
         </section>
 
         <!-- Step 4 -->
-        <section id="step4" class="step-card">
+        <section id="step4" class="step-card" role="region" aria-labelledby="step4-title" tabindex="0">
             <img src="images/step4.webp" alt="Pork simmering in adobo sauce">
             <div class="content">
-                <h2>Step 4: Simmer the Adobo</h2>
+                <h2 id="step4-title">Step 4: Simmer the Adobo</h2>
                 <p>Add vinegar, bay leaves, and water. Simmer for 10 minutes.</p>
-                <a href="#step3" class="prev-btn">⬅ Back</a>
-                <a href="#step5" class="next-btn">Next ➡</a>
+            </div>
+            <div class="nav-controls">
+                <a href="#step3" class="nav-btn">⬅ Back</a>
+                <a href="#step5" class="nav-btn">Next ➡</a>
             </div>
         </section>
 
         <!-- Step 5 -->
-        <section id="step5" class="step-card">
+        <section id="step5" class="step-card" role="region" aria-labelledby="step5-title" tabindex="0">
             <img src="images/step5.webp" alt="A bowl of pork adobo">
             <div class="content">
-                <h2>Step 5: Serve and Enjoy</h2>
+                <h2 id="step5-title">Step 5: Serve and Enjoy</h2>
                 <p>Once the sauce thickens, serve with rice and enjoy!</p>
-                <a href="#step4" class="prev-btn">⬅ Back</a>
-                <a href="#step1" class="restart-btn">Restart</a>
+            </div>
+            <div class="nav-controls">
+                <a href="#step4" class="nav-btn">⬅ Back</a>
+                <a href="#step1" class="nav-btn">Restart</a>
             </div>
         </section>
 
     </main>
+
+    <script>
+        if (!window.location.hash) {
+            window.location.hash = "#step1";
+        }
+    </script>
 
 </body>
 </html>

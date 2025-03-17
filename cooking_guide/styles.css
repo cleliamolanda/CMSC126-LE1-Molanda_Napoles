@@ -1,163 +1,143 @@
-/* General Styles */
+/* ----- General Reset & Styles ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background: #1e1e2f;
-    color: #fff;
-    margin: 0;
-    padding: 0;
+    background-image: url('bg.jpg');    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
     text-align: center;
-    overflow: hidden;
 }
 
-/* Header */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+/* ----- Header Styles ----- */
 header {
-    background: #ff3d00;
-    padding: 5px;
-    font-size: 1.2rem;
+    background: linear-gradient(90deg, #ff3d00, #ff7300);
+    padding: 12px 5px;
+    font-size: 1.3rem;
     font-weight: bold;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    text-align: center;
 }
 
 header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+    font-size: 2.5rem;
 }
 
 header p {
     font-size: 1rem;
-    font-weight: 600;
+    margin-top: 5px;
 }
 
-/* Recipe Container */
+/* ----- Recipe Container ----- */
 .recipe-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     justify-content: center;
-    margin-top: 120px; /* Adjust this value if needed */
-    padding-top: 30px; /* Additional space below the header */
+    padding-top: 120px;
 }
 
-/* Step Cards */
+/* ----- Step Cards ----- */
 .step-card {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: #2b2b3d;
+    color: #fff;
     width: 90%;
     max-width: 450px;
     min-height: 70vh;
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 3vh;
-    box-shadow: 0px 8px 20px rgba(255, 61, 0, 0.2);
+    box-shadow: 0px 8px 25px rgba(255, 61, 0, 0.3);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: absolute;
+    left: -9999px;
+    border: 2px solid rgba(255, 61, 0, 0.5);
 }
 
-/* Ensure the first step is visible by default */
-.step-card:first-of-type {
-    display: flex;
+.step-card h2 {
+    margin-bottom: 16px; /* Adds spacing between title and content */
 }
 
+/* ----- Show Active Step ----- */
 .step-card:target {
     display: flex;
-    transform: scale(1.02);
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
 }
 
-/* Accessibility Improvement - Hide Non-Active Steps from Screen Readers */
+/* ----- Hide Non-Active Steps for Screen Readers ----- */
 .step-card:not(:target) {
-    display: none;
+    opacity: 0;
     visibility: hidden;
+    position: absolute;
+    left: -9999px;
     aria-hidden: true;
 }
 
-/* Text Styling */
-.step-card h2 {
-    font-size: clamp(1.3rem, 2vw, 1.8rem);
-    margin-top: 10px;
-}
-
-.step-card p {
-    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-}
-
-/* Images */
+/* ----- Image & List Styling ----- */
 .step-card img {
     width: 85%;
     max-width: 250px;
-    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 10px;
-    display: block;
+    border-radius: 12px;
     margin: 10px auto;
 }
 
-/* Ingredients List */
-.ingredients-list {
-    text-align: left;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px;
-    border-radius: 8px;
-    list-style-type: none;
-    font-size: clamp(1rem, 1.2vw, 1.1rem);
-}
-
-/* Buttons */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-}
-
-.next-btn, .prev-btn, .restart-btn {
+/* ----- Buttons ----- */
+.nav-btn {
     display: inline-block;
-    padding: clamp(10px, 1vw, 14px) clamp(16px, 2vw, 22px);
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin: 15px 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ff5733;
     color: white;
-    background: #ff3d00;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
-.next-btn:hover, .prev-btn:hover, .restart-btn:hover {
-    background: #d32f2f;
+.nav-btn:hover, .nav-btn:focus {
+    background: #ff7433;
+    transform: scale(1.05);
 }
 
-a:focus {
-    outline: 3px solid #ffcc00;
-}
-
-/* Mobile Responsive */
+/* ----- Mobile Responsive ----- */
 @media (max-width: 600px) {
     .step-card {
-        width: 95%;
-        max-width: 90%;
-        min-height: 75vh;
-        padding: 4vh;
-    }
-
-    .step-card img {
-        max-width: 200px;
-    }
-
-    header {
-        padding: 5px;
-    }
-
-    header h1 {
-        font-size: 1.3rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
+        width: 90%;
+        min-height: 80vh;
+        padding: 5vh;
     }
 }
