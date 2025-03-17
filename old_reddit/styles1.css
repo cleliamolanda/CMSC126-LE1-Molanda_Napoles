@@ -63,7 +63,7 @@ sidebar {
 .subreddits {
     display: flex;
     flex-direction: column;
-
+    margin-top: 5px;
 }
 
 .subreddits-links {
@@ -71,16 +71,21 @@ sidebar {
     border: none;
     text-align: left;
     font-size: 12px;
-    padding: 8px 10px;
+    padding: 3px 15px;
     width: 100%;
     cursor: pointer;
-    color: #0079d3;
+    color: #6B7076;
     font-weight: bold;
     display: block;
 }
 
 .subreddits-links:hover {
     background-color: #c6d6ee;
+}
+
+.subreddits-links a {
+    color: #0079d3;
+    text-decoration: none;
 }
 
 .subreddits button.active {
@@ -91,12 +96,6 @@ sidebar {
     border-width: 1px 0px;
 
 }
-
-/* .more a {
-    text-decoration: none;
-    color: #0079d3;
-    font-weight: bold;
-} */
 
 .side-box {
     background-color: #DCEDFF;
@@ -178,10 +177,12 @@ sidebar {
 
 .search-container {
     display: flex;
+    align-items: center;
     border: 1px solid #6B7076;
     border-radius: 3px;
     overflow: hidden;
-    /* height: 50%; */
+    height: 20px;
+    font-size: 10px;
 }
 
 .search-bar {
@@ -192,21 +193,23 @@ sidebar {
     background-color: #F9F9F9;
 }
 
+
 .search-btn {
     border: none;
     border-left: 1px solid #6B7076;
     background-color: #F9F9F9;
     padding: 5px;
     cursor: pointer;
+    font-size: 10px;
 }
 
 .notifications button {
     background: #F9F9F9;
     border: 1px solid #6B7076;
     border-radius: 3px;
-    padding: 5px 10px;
-    font-size: 12px;
+    font-size: 10px;
     color: #0079d3;
     cursor: pointer;
-    /* height: 50%; */
+    height: 20px;
+    text-align: center;
 }
