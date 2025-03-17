@@ -3,72 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pork Adobo Recipe</title>
+    <title>Filipino Pork Adobo Recipe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <h1>Pork Adobo Recipe</h1>
+        <h1>Filipino Pork Adobo Recipe</h1>
+        <p>Step-by-step guide to making the best pork adobo.</p>
     </header>
 
     <main class="recipe-container">
-        <section class="recipe-steps">
-            <h2>Cooking Instructions</h2>
 
-            <!-- Step 1 -->
-            <article id="step1" class="recipe-card">
-                <img src="step1.webp" alt="Marinate pork">
-                <div class="recipe-content">
-                    <h3>Step 1: Marinate</h3>
-                    <p>Marinate pork belly in soy sauce and garlic powder for at least 20 minutes.</p>
-                </div>
-                <a href="#step2" class="next">Next →</a>
-            </article>
-
-            <!-- Step 2 -->
-            <article id="step2" class="recipe-card">
-                <img src="step3.webp" alt="Prepare pork">
-                <div class="recipe-content">
-                    <h3>Step 2: Prep Pork</h3>
-                    <p>Coat pork belly in soy sauce and garlic powder while mincing garlic.</p>
-                </div>
-                <a href="#step1" class="prev">← Back</a>
-                <a href="#step3" class="next">Next →</a>
-            </article>
-
-            <!-- Step 3 -->
-            <article id="step3" class="recipe-card">
-                <img src="step3.webp" alt="Fry pork">
-                <div class="recipe-content">
-                    <h3>Step 3: Fry Pork</h3>
-                    <p>In a heated pan with oil, fry pork belly until golden brown on all sides.</p>
-                </div>
-                <a href="#step2" class="prev">← Back</a>
-                <a href="#step4" class="next">Next →</a>
-            </article>
-
-            <!-- Step 4 -->
-            <article id="step4" class="recipe-card">
-                <img src="step4.webp" alt="Sauté garlic">
-                <div class="recipe-content">
-                    <h3>Step 4: Sauté Garlic</h3>
-                    <p>Remove the pork, then add minced garlic to the pan. Do not burn.</p>
-                </div>
-                <a href="#step3" class="prev">← Back</a>
-                <a href="#step5" class="next">Next →</a>
-            </article>
-
-            <!-- Final Step -->
-            <article id="step5" class="recipe-card">
-                <img src="step5.webp" alt="Serve pork">
-                <div class="recipe-content">
-                    <h3>Step 5: Serve</h3>
-                    <p>Enjoy your Pork Adobo with steamed rice!</p>
-                </div>
-                <a href="#step4" class="prev">← Back</a>
-                <a href="#step1" class="restart">↺ Restart</a>
-            </article>
+        <!-- Step 1 -->
+        <section id="step1" class="step-card" role="region" aria-labelledby="step1-title" tabindex="0">
+            <div class="content">
+                <h2 id="step1-title">Step 1: Prepare Ingredients</h2>
+                <ul>
+                    <li>1 kg pork belly (cut into chunks)</li>
+                    <li>1/2 cup soy sauce</li>
+                    <li>1/2 cup vinegar</li>
+                    <li>6 cloves garlic (minced)</li>
+                    <li>1 tsp black peppercorns</li>
+                    <li>3 bay leaves</li>
+                    <li>1 tbsp cooking oil</li>
+                    <li>1 cup water</li>
+                    <li>(Optional) 1 tbsp sugar</li>
+                </ul>
+            </div>
+            <div class="nav-controls">
+                <a href="#step2" class="nav-btn">Next ➡</a>
+            </div>
         </section>
+
+        <!-- Step 2 -->
+        <section id="step2" class="step-card" role="region" aria-labelledby="step2-title" tabindex="0">
+            <img src="images/step1.webp" alt="Pork marinating in soy sauce">
+            <div class="content">
+                <h2 id="step2-title">Step 2: Marinate the Pork</h2>
+                <p>Mix pork, soy sauce, garlic, and pepper. Let it marinate for 30 minutes.</p>
+            </div>
+            <div class="nav-controls">
+                <a href="#step1" class="nav-btn">⬅ Back</a>
+                <a href="#step3" class="nav-btn">Next ➡</a>
+            </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section id="step3" class="step-card" role="region" aria-labelledby="step3-title" tabindex="0">
+            <img src="images/step3.webp" alt="Pork being browned in a pan">
+            <div class="content">
+                <h2 id="step3-title">Step 3: Brown the Pork</h2>
+                <p>Heat oil and sauté the pork until golden brown.</p>
+            </div>
+            <div class="nav-controls">
+                <a href="#step2" class="nav-btn">⬅ Back</a>
+                <a href="#step4" class="nav-btn">Next ➡</a>
+            </div>
+        </section>
+
+        <!-- Step 4 -->
+        <section id="step4" class="step-card" role="region" aria-labelledby="step4-title" tabindex="0">
+            <img src="images/step4.webp" alt="Pork simmering in adobo sauce">
+            <div class="content">
+                <h2 id="step4-title">Step 4: Simmer the Adobo</h2>
+                <p>Add vinegar, bay leaves, and water. Simmer for 10 minutes.</p>
+            </div>
+            <div class="nav-controls">
+                <a href="#step3" class="nav-btn">⬅ Back</a>
+                <a href="#step5" class="nav-btn">Next ➡</a>
+            </div>
+        </section>
+
+        <!-- Step 5 -->
+        <section id="step5" class="step-card" role="region" aria-labelledby="step5-title" tabindex="0">
+            <img src="images/step5.webp" alt="A bowl of pork adobo">
+            <div class="content">
+                <h2 id="step5-title">Step 5: Serve and Enjoy</h2>
+                <p>Once the sauce thickens, serve with rice and enjoy!</p>
+            </div>
+            <div class="nav-controls">
+                <a href="#step4" class="nav-btn">⬅ Back</a>
+                <a href="#step1" class="nav-btn">Restart</a>
+            </div>
+        </section>
+
     </main>
+
+    <script>
+        if (!window.location.hash) {
+            window.location.hash = "#step1";
+        }
+    </script>
+
 </body>
 </html>
