@@ -135,9 +135,15 @@ header p {
 
 /* ----- Mobile Responsive ----- */
 @media (max-width: 600px) {
+    body {
+        font-size: 1.2rem;
+    }
     .step-card {
-        width: 90%;
-        min-height: 80vh;
-        padding: 5vh;
+        min-height: 85vh;
+        padding: 6vh;
+    }
+    .nav-btn {
+        font-size: 18px;
+        padding: 14px 24px;
     }
 }
