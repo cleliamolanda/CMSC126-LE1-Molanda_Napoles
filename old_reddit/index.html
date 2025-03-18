@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Old Reddit</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
     <header>
@@ -13,102 +13,366 @@
         </div>
         <div class="header-right">
             <p>
-                <strong><a href="#">7hundredand77</a></strong>, you're back!
+                <a href="#">7hundredand77</a>, you're back!
                 <a href="#">preferences</a>
                 <a href="#">logout?</a> :(
             </p>
         </div>
     </header>
-
-    <nav>
-        <div>
-            <ul class="tabmenu">
-                <li class="active">what's hot</li>
-                <li>new</li>
-                <li>controversial</li>
-                <li>top</li>
-                <li>saved</li>
-            </ul>
-        </div>
-
-        <div class="nav-right">
-            <div class="search-container">
-                <input type="text" class="search-bar" placeholder="">
-                <button class="search-btn">🔍</button>
+    <main>
+        <sidebar>
+            <div class="subreddits">
+                <button class="subreddits-links">📝 FRONT PAGE</li>
+                <button class="subreddits-links">🤖 PICS</li>
+                <button class="subreddits-links">🧪 SCIENCE</li>
+                <button class="subreddits-links">🌏 TECHNOLOGY</li>
+                <button class="subreddits-links">🤖 ASK REDDIT</li>
+                <button class="subreddits-links">🤖 FUNNY</li>
+                <button class="subreddits-links">🤖 WTF</li>
+                <button class="subreddits-links active">🤖 IAMA</li>
+                <button class="subreddits-links">🤖 WORLD NEWS</li>
+                <button class="subreddits-links">🤖 TODAYILEARNED</li>
+                <button class="subreddits-links">🤖 WORLDNEWS</li>
+                <button class="subreddits-links">🤖 WEBDESIGN</li>
+                <button class="subreddits-links">🤖 ATHEIST</li>
+                <button class="subreddits-links">🤖 FFFFUUUUUUUUUU</li>
+                <button class="subreddits-links"><a href="#">(MORE)</a></li>
             </div>
-            <button class="new-msg">1 New Msg</button>
-            <button class="links">53,211 Link</button>
-            <button class="comments">4,887 Comment</button>
-        </div>
-    </nav>
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <ul class="subreddits">
-                <li class="selected"><i class="fas fa-home"></i> FRONT PAGE</li>
-                <li><i class="fas fa-image"></i> PICS</li>
-                <li><i class="fas fa-flask"></i> SCIENCE</li>
-                <li><i class="fas fa-microchip"></i> TECHNOLOGY</li>
-                <li><i class="fas fa-comments"></i> ASK REDDIT</li>
-                <li><i class="fas fa-laugh"></i> FUNNY</li>
-                <li><i class="fas fa-exclamation-circle"></i> WTF</li>
-                <li class="selected-iama">IAMA</li>
-                <li><i class="fas fa-globe"></i> WORLD NEWS</li>
-                <li><i class="fas fa-lightbulb"></i> TODAYILEARNED</li>
-                <li><i class="fas fa-newspaper"></i> WORLDNEWS</li>
-                <li><i class="fas fa-code"></i> WEBDESIGN</li>
-                <li><i class="fas fa-book"></i> ATHEIST</li>
-                <li><i class="fas fa-grin-squint"></i> FFFFUUUUUUUUUU</li>
-            </ul>
-            <p class="more"><a href="#">(MORE)</a></p>
-
-            <!-- Submit & Create Community -->
-            <div class="side-box">
-                <p class="side-header">Submit a link</p>
+            <aside class="side-box">
+                <a href="#" class="side-header">Submit a link</a>
                 <p class="side-text">to anything interesting: news article, blog entry, video, picture...</p>
-            </div>
-            <div class="side-box">
-                <p class="side-header">Create Community</p>
+            </aside>
+            <aside class="side-box">
+                <a href="#" class="side-header">Create Community</a>
                 <p class="side-text">...for your LARPing community.<br> ...because nothing in life is free (except reddit!) here on the side</p>
-            </div>
-
-            <!-- Tiny Ad -->
-            <div class="tiny-ad">
+            </aside>
+            <aside class="tiny-ad">
                 <img src="little-big-planet.jpg" alt="Little Big Planet">
-                <p>tiniest ad in the world</p>
+                <span>tiniest ad in the world</span>
+            </aside>
+        </sidebar>
+        <div class="main-content">
+            <div class="top-nav">
+                <div class="tab-menu">
+                    <button class="active">what's hot</button>
+                    <button>new</button>
+                    <button>controversial</button>
+                    <button>top</button>
+                    <button>saved</button>
+                </div>
+                <div class="nav-right">
+                    <div class="search-container">
+                        <input type="text" class="search-bar" placeholder="">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="notifications">
+                        <button>1 New Msg</button>
+                        <button>53,211 Link</button>
+                        <button>4,887 Comment</button>
+                    </div>
+                </div>
             </div>
-        </aside>
 
-        <main class="main-content">
-            <!-- Post List -->
-            <section class="post-list">
-                <article class="post">
-                    <span class="votes">🔺 120</span>
-                    <div class="post-content">
-                        <h2>Post Title 1</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <span class="comments">💬 45 comments</span>
+            <div class="tabcontent">
+                <div class="feed">
+                    <div class="feed-item">
+                        <span class="rank">1</span>
+                        <div class="score">
+                            <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                            215
+                            <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                        </div>
+                        <img src="image-1.jfif" class="post-image"></img>
+                        <div class="post">
+                            <div class="post-title">
+                                <a href="#">What do you call 60 guys watching Superbowl at home?</a>
+                                <p>(cnn.com)</p>
+                            </div>
+                            <span class="post-details">
+                                submitted 19 hours ago by <a href="#">krispykrackers</a>
+                            </span>
+                            <div class="post-options">
+                                <a href="view-comments">623 comments</a>
+                                <a href="share-post">share</a>
+                                <a href="save-post">save</a>
+                                <a href="hide-post">hide</a>
+                                <a href="report">report</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                    <div class="feed-item active">
+                        <span class="rank">2</span>
+                        <div class="score">
+                            <button class="vote-buttons upvote-arrow active">&#x1f845;</button>
+                            232
+                            <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                        </div>
+                        <div class="post">
+                            <div class="post-title">
+                                <a href="#">IAM the guy who created this design AMA</a>
+                                <p>(i.imgur.com)</p>
+                            </div>
+                            <span class="post-details">
+                                submitted 19 hours ago by <a href="#">7hundredand77</a>
+                            </span>
+                            <div class="post-options">
+                                <a href="view-comments">200 comments</a>
+                                <a href="share-post">share</a>
+                                <a href="save-post">save</a>
+                                <a href="hide-post">hide</a>
+                                <a href="report">report</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-post">
+                    <div class="post-header">
+                        <div class="post-header-title">
+                            <span>IAM the guy who created this design AMA</span>
+                            <p>(i.imgur.com)</p>
+                        </div>
+                        <div class="post-content"><a href="#">http://img3.shack.us/img3/9807/goodlookingnew23.jpg</a></div>
+                        <div class="post-more-details">
+                            <div class="score-details">
+                                <div class="points">
+                                    <span>232 points</span>
+                                    <p>(71% like it)</p>
+                                </div>
+                                <div class="votes">
+                                    <p class="upvote">390 up votes</p>
+                                    <p class="downvote">158 down votes</p>
+                                </div>
+                            </div>
+                            <div class="more-options">
+                                <p>submitted on 01 Feb 2011</p>
+                                <div class="comments-details">
+                                    <p>200 comments</p>
+                                    <a href="#">sort by</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-section">
+                        <div class="add-comment-container">
+                            <div class="add-comment-input">
+                                <input type="text">
+                                <p>formatting help</p>
+                            </div>
+                            <button class="buttons">save</button>
+                        </div>
+                        <div class="comment">
+                            <div class="vote-comment">
+                                <div class="vote">
+                                    <button class="vote-buttons upvote-arrow active">&#x1f845;</button>
+                                    <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                </div>
+                                <div class="comment-container">
+                                    <div class="comment-header">
+                                        <span class="username">UserNumber42</span>
+                                        <span>47 points 21 hours ago</span>
+                                        <span class="collapse-comment">[-]</span>
+                                    </div>
+                                    <div class="comment-body">
+                                        <p>Wow, the first reddit redesign that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors, this could be very cool.</p>
+                                        <p>Only suggestion is to have a lower the width of the scores column for each post and the subreddit sidebar so there is more room for the content</p>
+                                    </div>
+                                    <div class="post-options">
+                                        <a href="#">permalink</a>
+                                        <a href="report">report</a>
+                                        <a href="reply">reply</a>
+                                    </div>
+                                </div>
+                            </div>
 
-                <article class="post">
-                    <span class="votes">🔺 85</span>
-                    <div class="post-content">
-                        <h2>Post Title 2</h2>
-                        <p>Another interesting post about something cool.</p>
-                        <span class="comments">💬 30 comments</span>
-                    </div>
-                </article>
+                            <div class="comment nested">
+                                <div class="vote-comment">
+                                    <div class="vote">
+                                        <button class="vote-buttons upvote-arrow active">&#x1f845;</button>
+                                        <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                    </div>
+                                    <div class="comment-container">
+                                        <div class="comment-header">
+                                            <span class="username">7hundredand77</span>
+                                            <span class="pts-timestamp">14 points 20 hours ago</span>
+                                            <span class="collapse-comment">[-]</span>
+                                        </div>
+                                        <div class="comment-body">
+                                            <p>Ha, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively. A sweet spot with columns needs to be found where there is enough space to view everything perfectly. Since I just quickly put this one together, I didn't really spend much time finding that right balance.</p>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">permalink</a>
+                                            <a href="parent">parent</a>
+                                            <a href="edit">edit</a>
+                                            <a href="delete">delete</a>
+                                            <a href="reply">reply</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <article class="post">
-                    <span class="votes">🔺 45</span>
-                    <div class="post-content">
-                        <h2>Post Title 3</h2>
-                        <p>A third post with some engaging discussion.</p>
-                        <span class="comments">💬 12 comments</span>
+                                <div class="comment nested">
+                                    <div class="vote-comment">
+                                        <div class="vote">
+                                            <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                            <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                        </div>
+                                        <div class="comment-container">
+                                            <div class="comment-header">
+                                                <span class="username">aliasforspam</span>
+                                                <span class="pts-timestamp">7 points 15 hours ago</span>
+                                                <span class="collapse-comment">[-]</span>
+                                            </div>
+                                            <div class="comment-body">
+                                                <p>This looks like an email client. Brilliant!</p>
+                                                <p>...I never realized how much Reddit is like reading an email until now. I guess we could view things in brackets much like forwards from the uncle you otherwise don't communicate with. DAE blah blah = FWD: FWD: Fwd: You gotta read this!</p>
+                                            </div>
+                                            <div class="post-options">
+                                                <a href="#">permalink</a>
+                                                <a href="parent">parent</a>
+                                                <a href="report">report</a>
+                                                <a href="reply">reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comment nested">
+                                        <div class="vote-comment">
+                                            <div class="vote">
+                                                <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                                <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                            </div>
+                                            <div class="comment-container">
+                                                <div class="comment-header">
+                                                    <span class="username">Deterministic</span>
+                                                    <span class="pts-timestamp">4 points 11 hours ago</span>
+                                                    <span class="collapse-comment">[-]</span>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <p>It's funny your mention email, because it loojs ever-so-vaguely like <a href="#">Google Wave</a>, except that instead of Menu|Inboxes|Emails, it's Subreddits|Topics|Comments</p>
+                                                    <p>Nevertheless, it's an interesting concept for a redesign - a bit shinier, but still maintaining the minimalistic design.</p>
+                                                </div>
+                                                <div class="post-options">
+                                                    <a href="#">permalink</a>
+                                                    <a href="parent">parent</a>
+                                                    <a href="report">report</a>
+                                                    <a href="reply">reply</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment nested">
+                                    <div class="vote-comment">
+                                        <div class="vote">
+                                            <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                            <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                        </div>
+                                        <div class="comment-container">
+                                            <div class="comment-header">
+                                                <span class="username">volve</span>
+                                                <span class="pts-timestamp">2 points 10 hours ago</span>
+                                                <span class="collapse-comment">[-]</span>
+                                            </div>
+                                            <div class="comment-body">
+                                                <p>Except let's be honest; I only rarely maximize windows on my 24" monitors, almost never for something like passive entertainment such as Reddit. I personally feel a lot of these "wide-screen optimized" designs miss the point that they aren't likely the sole activity on said widescreen...</p>
+                                                <p>(But it is a very nice design!)</p>
+                                            </div>
+                                            <div class="post-options">
+                                                <a href="#">permalink</a>
+                                                <a href="parent">parent</a>
+                                                <a href="report">report</a>
+                                                <a href="reply">reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment nested">
+                                    <div class="vote-comment">
+                                        <div class="vote">
+                                            <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                            <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                        </div>
+                                        <div class="comment-container">
+                                            <div class="comment-header">
+                                                <span class="username">freshwire [🍰]</span>
+                                                <span class="pts-timestamp">2 points 9 hours ago</span>
+                                                <span class="collapse-comment">[-]</span>
+                                            </div>
+                                            <div class="comment-body">
+                                                <p>You could have it that the column width can be changed (by just dragging around).</p>
+                                            </div>
+                                            <div class="post-options">
+                                                <a href="#">permalink</a>
+                                                <a href="parent">parent</a>
+                                                <a href="report">report</a>
+                                                <a href="reply">reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment nested">
+                                <div class="vote-comment">
+                                    <div class="vote">
+                                        <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                        <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                    </div>
+                                    <div class="comment-container">
+                                        <div class="comment-header">
+                                            <span class="username">gustthebus</span>
+                                            <span class="pts-timestamp">3 points 15 hours ago</span>
+                                            <span class="collapse-comment">[-]</span>
+                                        </div>
+                                        <div class="comment-body">
+                                            <p>I agree. Additionally, it wouldn't be difficult to provide a button to toggle from the current layout, to the OP's design.</p>
+                                            <p>That would be a simple JavaScript to change out the page CSS. The dev team could take it one step farther and cache the user's UI choice.</p>
+                                        </div>
+                                        <div class="post-options">
+                                            <a href="#">permalink</a>
+                                            <a href="parent">parent</a>
+                                            <a href="report">report</a>
+                                            <a href="reply">reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="vote-comment">
+                                <div class="vote">
+                                    <button class="vote-buttons upvote-arrow">&#x1f845;</button>
+                                    <button class="vote-buttons downvote-arrow">&#x1f847;</button>
+                                </div>
+                                <div class="comment-container">
+                                    <div class="comment-header">
+                                        <span class="username">7hundredand77</span>
+                                        <span class="pts-timestamp">7 points 14 hours ago*</span>
+                                        <span class="collapse-comment">[-]</span>
+                                    </div>
+                                    <div class="comment-body">
+                                        <p>I am going to update the design tonight. There have been a lot of responses and feedback on what needs to be done:</p>
+                                        <ul>
+                                            <li>Orange Icon for new messages</li>
+                                            <li>A more reddit styled colour theme rather than the white grey</li>
+                                            <li>Update column widths</li>
+                                            <li>Allow dynamic sized story lengths</li>
+                                        </ul>
+                                    </div>
+                                    <div class="post-options">
+                                        <a href="#">permalink</a>
+                                        <a href="parent">parent</a>
+                                        <a href="edit">edit</a>
+                                        <a href="delete">delete</a>
+                                        <a href="reply">reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </article>
-            </section>
-        </main>
-    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
